@@ -4,7 +4,7 @@
 
 @implementation App
 
-NSString *defaultPath = @"/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl";
+NSString *defaultPath = @"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl";
 
 -(void)awakeFromNib {
     NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
@@ -36,7 +36,7 @@ NSString *defaultPath = @"/Applications/Sublime Text 2.app/Contents/SharedSuppor
                 [task launch];
                 [task release];
                 NSWorkspace *sharedWorkspace = [NSWorkspace sharedWorkspace];
-                NSString *appPath = [sharedWorkspace fullPathForApplication:@"Sublime Text 2"];
+                NSString *appPath = [sharedWorkspace fullPathForApplication:@"Sublime Text"];
                 NSString *identifier = [[NSBundle bundleWithPath:appPath] bundleIdentifier];
                 NSArray *selectedApps =
                 [NSRunningApplication runningApplicationsWithBundleIdentifier:identifier];
